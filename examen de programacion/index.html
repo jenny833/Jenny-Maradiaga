@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Productos Tecnológicos</title>
+</head>
+<body>
+
+    <h2 style="text-align: center;background-color: blue;">Registro de Productos Tecnológicos</h2>
+
+    <label for="nombre">Nombre del Producto:</label>
+    <input type="text" id="nombre"><br><br>
+
+    <label for="codigo">Código:</label>
+    <input type="number" id="codigo" placeholder="Ingrese Código"> 
+    <button onclick="buscarProducto()">Buscar</button><br><br>
+
+    <label for="precio">Precio:</label>
+    <input type="number" id="precio"><br><br>
+
+    <label for="stock">Stock:</label>
+    <input type="number" id="stock"><br><br>
+
+    <label for="categoria">Categoría:</label>
+    <select id="categoria">
+        <option value="Laptop">Laptop</option>
+        <option value="Monitor">Monitor</option>
+        <option value="Teclado">Teclado</option>
+        <option value="Mouse">Mouse</option>
+        <option value="Otros">Otros</option>
+    </select><br><br>
+
+    <button onclick="cargarProducto()">Agregar Producto</button>
+    <button onclick="actualizarProducto()">Actualizar Producto</button>
+    <button onclick="eliminarProducto()">Eliminar Producto</button>
+
+    <h3>Lista de Productos</h3>
+    <table border="1px" width="100%" id="productos"  style="background-color: blue;">
+        <tr>
+            <th>Nombre</th>
+            <th>Código</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Categoría</th>
+            <th>Fecha de Registro</th>
+        </tr>
+    </table>
+ 
+    <script src="app.js"></script>  
+
+</body>
+</html>
